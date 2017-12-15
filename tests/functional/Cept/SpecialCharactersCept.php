@@ -1,4 +1,5 @@
-<?php 
+<?php
+/** @var \Codeception\Scenario $scenario */
 $I = new FunctionalTester($scenario);
 $I->wantTo('test for text that uses special characters');
 

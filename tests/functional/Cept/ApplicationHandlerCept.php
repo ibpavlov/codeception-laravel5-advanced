@@ -1,4 +1,5 @@
 <?php
+/** @var \Codeception\Scenario $scenario */
 $I = new FunctionalTester($scenario);
 
 $I->haveApplicationHandler(function($app) {

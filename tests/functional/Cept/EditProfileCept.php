@@ -1,4 +1,5 @@
 <?php
+/** @var \Codeception\Scenario $scenario */
 use App\User;
 
 $I = new FunctionalTester($scenario);

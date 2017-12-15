@@ -1,4 +1,5 @@
-<?php 
+<?php
+/** @var \Codeception\Scenario $scenario */
 $I = new FunctionalTester($scenario);
 $I->wantTo('register a user');
 

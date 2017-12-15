@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 class RecordCest
 {
     protected $userAttributes = [
@@ -19,7 +21,8 @@ class RecordCest
 
     public function testHaveRecordWithModel(FunctionalTester $I)
     {
-        $user = $I->haveRecord('App\User', $this->userAttributes);
+        /** @var User $user */
+        $user = $I->haveRecord(User::class, $this->userAttributes);
 
         $I->seeRecord('App\User', ['id' => $user->id, 'email' => 'johndoe@example.com']);
         $I->dontSeeRecord('App\User', ['id' => $user->id, 'email' => 'janedoe@example.com']);

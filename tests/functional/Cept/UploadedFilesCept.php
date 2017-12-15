@@ -1,4 +1,5 @@
-<?php 
+<?php
+/** @var \Codeception\Scenario $scenario */
 $I = new FunctionalTester($scenario);
 $I->wantTo('upload a file');
 $I->amOnPage(''); // Necessary to prevent LogicException with message "The page history is empty".
