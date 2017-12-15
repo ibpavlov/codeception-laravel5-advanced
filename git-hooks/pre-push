@@ -1,13 +1,11 @@
 #!/usr/bin/env php
 <?php
-
+//Run codeception tests and abort on fail
 $projectName = basename(getcwd());
 
-exec('vendor\bin\codecept run -q -n', $output, $returnCode);
+exec('vendor\bin\codecept run -n -q -f', $output, $returnCode);
 
 if ($returnCode !== 0) {
-    printf("ABORTING Push!\n");
     exit(1);
 }
-
 exit(0);

@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-
+//Run codeception tests and show HTML file with generated test results
 $projectName = basename(getcwd());
 
 exec('vendor\bin\codecept run --no-colors -n --html', $output, $returnCode);
