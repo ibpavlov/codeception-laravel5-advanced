@@ -1,4 +1,5 @@
-<?php namespace App\Http\Controllers\Api;
+<?php
+namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostStoreRequest;
@@ -89,8 +90,9 @@ class PostsController extends Controller {
     /**
      * Delete the specified post.
      *
-     * @param  int  $id
-     * @return JsonResponse
+     * @param  int $id
+     * @return void
+     * @throws \Exception
      */
     public function destroy($id)
     {
