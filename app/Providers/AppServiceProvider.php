@@ -1,9 +1,13 @@
 <?php namespace App\Providers;
 
 use App\Validation\CustomValidator;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Application;
+use Validator;
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * @property Application $app
+ */
 class AppServiceProvider extends ServiceProvider
 {
 
@@ -37,6 +41,11 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind('App\Test\StringConverter', 'App\Test\ToLowercase');
         $this->app->addContextualBinding('App\Test\Repeat', '$times', 2);
+
+        if ($this->app->environment() !== 'production') {
+            /** @noinspection PhpUnnecessaryFullyQualifiedNameInspection */
+            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+        }
     }
 
 }
