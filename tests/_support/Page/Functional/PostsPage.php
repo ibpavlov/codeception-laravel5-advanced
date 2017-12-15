@@ -1,5 +1,4 @@
 <?php
-
 namespace Page\Functional;
 
 use FunctionalTester;
@@ -8,6 +7,10 @@ class PostsPage
 {
     public static $url = '/posts';
 
+    /**
+     * @param $param
+     * @return string
+     */
     public static function route($param)
     {
         return static::$url . $param;
@@ -25,6 +28,10 @@ class PostsPage
         $this->tester = $I;
     }
 
+    /**
+     * @param array $fields
+     * @throws \Exception
+     */
     public function createPost($fields = [])
     {
         $I = $this->tester;
@@ -34,6 +41,11 @@ class PostsPage
         $I->click('Submit');
     }
 
+    /**
+     * @param $id
+     * @param array $fields
+     * @throws \Exception
+     */
     public function editPost($id, $fields = [])
     {
         $I = $this->tester;
@@ -43,6 +55,9 @@ class PostsPage
         $I->click('Update');
     }
 
+    /**
+     * @param $id
+     */
     public function deletePost($id)
     {
         $I = $this->tester;
@@ -50,6 +65,10 @@ class PostsPage
         $I->click('Delete');
     }
 
+    /**
+     * @param $data
+     * @throws \Exception
+     */
     protected function fillFormFields($data)
     {
         foreach ($data as $field => $value) {
@@ -59,5 +78,4 @@ class PostsPage
             $this->tester->fillField(static::$formFields[$field], $value);
         }
     }
-
 }

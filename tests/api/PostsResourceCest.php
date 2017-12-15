@@ -4,7 +4,9 @@ class PostsResourceCest
 {
     protected $endpoint = '/api/posts';
 
-    // tests
+    /**
+     * @param ApiTester $I
+     */
     public function getAllPosts(ApiTester $I)
     {
         $id = (string) $this->havePost($I, ['title' => 'Game of Thrones']);
@@ -19,6 +21,9 @@ class PostsResourceCest
         $I->seeResponseContainsJson([['id' => $id], ['id' => $id2]]);
     }
 
+    /**
+     * @param ApiTester $I
+     */
     public function getSinglePost(ApiTester $I)
     {
         $id = (string) $this->havePost($I, ['title' => 'Starwars']);
@@ -30,6 +35,10 @@ class PostsResourceCest
         $I->dontSeeResponseContainsJson([['id' => $id]]);
     }
 
+    /**
+     * @param ApiTester $I
+     * @throws Exception
+     */
     public function createPost(ApiTester $I)
     {
         $I->sendPOST($this->endpoint, ['title' => 'Game of Rings', 'body' => 'By George Tolkien']);
@@ -44,6 +53,9 @@ class PostsResourceCest
         $I->seeResponseContainsJson(['title' => 'Game of Rings']);
     }
 
+    /**
+     * @param ApiTester $I
+     */
     public function updatePost(ApiTester $I)
     {
         $id = (string) $this->havePost($I, ['title' => 'Game of Thrones']);
@@ -55,6 +67,9 @@ class PostsResourceCest
         $I->dontSeeRecord('posts', ['title' => 'Game of Thrones']);
     }
 
+    /**
+     * @param ApiTester $I
+     */
     public function deletePost(ApiTester $I)
     {
         $id = (string) $this->havePost($I, ['title' => 'Game of Thrones']);
@@ -63,6 +78,11 @@ class PostsResourceCest
         $I->dontSeeRecord('posts', ['id' => $id]);
     }
 
+    /**
+     * @param ApiTester $I
+     * @param array $data
+     * @return Illuminate\Database\Eloquent\Model|int
+     */
     private function havePost(ApiTester $I, $data = [])
     {
         $data = array_merge([
