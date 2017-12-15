@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+$projectName = basename(getcwd());
+
+exec('vendor\bin\codecept run --no-colors -n --html', $output, $returnCode);
+
+if ($returnCode !== 0) {
+	$html = array_pop($output);
+  $minimalTestSummary = array_pop($output);
+  printf("Codeception Test suite for %s failed: ", $projectName);
+  printf("( %s ) %s", $minimalTestSummary, PHP_EOL);
+  printf("%s %s", $html, PHP_EOL);
+  printf("ABORTING Push!\n");
+  exit(1);
+} else {
+  printf("Codeception tests are successful!\n");
+}
+
+exit(0);
