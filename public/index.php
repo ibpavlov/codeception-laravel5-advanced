@@ -20,6 +20,10 @@
 
 require __DIR__.'/../bootstrap/autoload.php';
 
+include __DIR__.'/../c3.php';
+
+define('MY_APP_STARTED', true);
+
 /*
 |--------------------------------------------------------------------------
 | Turn On The Lights

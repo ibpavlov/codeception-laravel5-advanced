@@ -1,6 +1,7 @@
 actor: Tester
 coverage:
     enabled: true
+    remote: true
     include:
         - app/Http/*
         - app/Post.php
