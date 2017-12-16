@@ -41,6 +41,19 @@ Run Codeception, installed via Composer
 
 Please check out `/tests` folder for some good test examples provided.
 
+### Acceptance
+
+Demonstrates tests with PhpBrowser and Codeception Chrome plugin:
+https://chrome.google.com/webstore/detail/codeception-testtools/jhaegbojocomemkcnmnpmoobbmnkijik
+
+### API Tests
+
+Demonstrates functional testing of API using REST and Laravel5 modules connected, with
+
+* partial json inclusion in response
+* GET/POST/PUT/DELETE requests
+* check changes inside database
+
 ### Functional Tests
 
 Demonstrates testing of CRUD application with
@@ -52,10 +65,11 @@ Demonstrates testing of CRUD application with
 * creating and checking records in database
 * testing of form errors
 
-### API Tests
+### Seeds Tests
 
-Demonstrates functional testing of API using REST and Laravel5 modules connected, with
+Just seed the DB and test if records are there. For integration testing
 
-* partial json inclusion in response
-* GET/POST/PUT/DELETE requests
-* check changes inside database
+### Unit Tests
+
+Various scenarios for Unit tests with Cest Cept.
+Shows how to properly test even controllers and mock dependencies
