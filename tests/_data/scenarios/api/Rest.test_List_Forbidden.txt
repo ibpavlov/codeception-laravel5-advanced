@@ -1,0 +1,6 @@
+I WANT TO TEST LIST FORBIDDEN | "POSTS"
+
+I send get '/api/'.$example['endpoint']" 
+I see response code is "HttpCode::FORBIDDEN" 
+I see response is json ""
+

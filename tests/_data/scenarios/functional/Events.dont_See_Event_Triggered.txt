@@ -1,0 +1,5 @@
+I WANT TO DONT SEE EVENT TRIGGERED
+
+I am on page '/' 
+I don't see event triggered 'App\Events\TestEvent'
+

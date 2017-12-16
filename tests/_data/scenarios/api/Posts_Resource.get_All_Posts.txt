@@ -1,0 +1,11 @@
+I WANT TO GET ALL POSTS
+
+I send get "$this->endpoint" 
+I see response code is "200" 
+I see response is json "" 
+I expect 'both items are in response' 
+I see response contains json "['id' => $id"," 'title' => 'Game of Thrones'," 'body' => 'Body']" 
+I see response contains json "['id' => $id2"," 'title' => 'Lord of the Rings'," 'body' => 'Body']" 
+I expect 'both items are in root array' 
+I see response contains json "[['id' => $id]"," ['id' => $id2]]"
+

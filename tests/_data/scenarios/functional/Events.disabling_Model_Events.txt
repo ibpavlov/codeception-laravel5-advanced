@@ -1,0 +1,5 @@
+I WANT TO DISABLING MODEL EVENTS
+
+I disable model events "" 
+I see record 'users'," ['email' => 'updated@example.com']"
+

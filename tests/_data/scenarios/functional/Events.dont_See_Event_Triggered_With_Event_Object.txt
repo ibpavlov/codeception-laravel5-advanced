@@ -1,0 +1,5 @@
+I WANT TO DONT SEE EVENT TRIGGERED WITH EVENT OBJECT
+
+I am on page '/' 
+I don't see event triggered(new \app\events\test event ")"
+

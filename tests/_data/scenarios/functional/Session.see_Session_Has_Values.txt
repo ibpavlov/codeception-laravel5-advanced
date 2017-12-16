@@ -1,0 +1,6 @@
+I WANT TO SEE SESSION HAS VALUES
+
+I am on page '/session/My%20Message' 
+I see session has values "['message']" 
+I see session has values "['message' => 'My Message']"
+

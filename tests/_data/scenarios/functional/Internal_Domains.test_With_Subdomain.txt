@@ -1,0 +1,5 @@
+I WANT TO TEST WITH SUBDOMAIN
+
+I am on page 'http://subdomain.example.com' 
+I see 'Subdomain route'
+

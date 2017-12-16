@@ -1,0 +1,4 @@
+I WANT TO TEST CONVERT
+
+I assert equals ""HELLO""," $result"
+

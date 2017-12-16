@@ -1,0 +1,8 @@
+I WANT TO TEST FOR TEXT THAT USES SPECIAL CHARACTERS
+
+I am on page '/special-characters' 
+I see 'Straße'," 'p.character' 
+I see 'Straße'," 'p.html-encoded' 
+I click 'Straße'," 'a.character' 
+I click 'Straße'," 'a.html-encoded'
+

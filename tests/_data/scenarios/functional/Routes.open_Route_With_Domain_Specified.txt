@@ -1,0 +1,6 @@
+I WANT TO OPEN ROUTE WITH DOMAIN SPECIFIED
+
+I am on route 'domain' 
+I see response code is "200" 
+I see 'Domain route'
+

@@ -1,0 +1,5 @@
+I WANT TO ROUTES WITH TRAILING SLASHES
+
+I am on page '/redirect' 
+I see current route is 'homepage'
+

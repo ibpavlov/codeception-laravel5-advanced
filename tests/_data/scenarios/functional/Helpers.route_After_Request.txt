@@ -1,0 +1,5 @@
+I WANT TO ROUTE AFTER REQUEST
+
+I am on route 'posts.index' 
+I assert equals('http://myapp.com/posts', route 'posts.index')"
+

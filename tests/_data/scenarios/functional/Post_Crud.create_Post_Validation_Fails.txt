@@ -1,0 +1,6 @@
+I WANT TO CREATE POST VALIDATION FAILS
+
+I see current url equals($posts page->route '/create')" 
+I see 'The body field is required.'," '.error' 
+I see 'The title field is required.'," '.error'
+

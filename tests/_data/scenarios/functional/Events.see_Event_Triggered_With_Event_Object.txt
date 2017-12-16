@@ -1,0 +1,5 @@
+I WANT TO SEE EVENT TRIGGERED WITH EVENT OBJECT
+
+I am on page 'fire-event' 
+I see event triggered(new \app\events\test event ")"
+

@@ -1,0 +1,15 @@
+I WANT TO 
+
+I am on page '/register' 
+I see 'Name' 
+I see 'Confirm Password' 
+I see 'Register' 
+I fill field 'name'," 'Ivelin' 
+I fill field('email', 'ibpavlov'.sq ").'@mailinator.com' 
+I fill field 'password'," 'qwerty' 
+I fill field 'password_confirmation'," 'qwerty' 
+I click 'Register'," 'button' 
+I see 'Hello world!' 
+I see 'Logged in' 
+I see 'Logout'
+

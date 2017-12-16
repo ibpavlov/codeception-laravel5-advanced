@@ -1,0 +1,6 @@
+I WANT TO TEST LIST | "POSTS"
+
+I send get '/api/'.$example['endpoint']" 
+I see response code is "HttpCode::OK" 
+I see response is json ""
+

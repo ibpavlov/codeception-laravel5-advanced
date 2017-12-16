@@ -1,0 +1,9 @@
+I WANT TO GET SINGLE POST
+
+I send get "$this->endpoint."/$id"" 
+I see response code is "200" 
+I see response is json "" 
+I see response contains json "['id' => $id"," 'title' => 'Starwars']" 
+I expect 'there is no root array in response' 
+I don't see response contains json "[['id' => $id]]"
+

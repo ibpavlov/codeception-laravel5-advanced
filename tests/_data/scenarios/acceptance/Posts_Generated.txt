@@ -1,0 +1,20 @@
+I WANT TO 
+
+I am on page '/posts' 
+I click 'Add new post' 
+I see current url equals '/posts/create' 
+I fill field 'title'," 'test' 
+I fill field 'body'," 'test new post' 
+I click 'Submit' 
+I see current url equals '/posts' 
+I see 'test new post' 
+I click 'Edit' 
+I see 'test new post' 
+I click 'Update' 
+I click 'Edit' 
+I fill field 'body'," 'test new post 2' 
+I click 'Update' 
+I see 'test new post 2' 
+I click 'Delete' 
+I see current url equals '/posts'
+

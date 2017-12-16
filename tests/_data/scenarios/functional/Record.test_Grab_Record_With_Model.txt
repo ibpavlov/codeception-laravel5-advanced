@@ -1,0 +1,6 @@
+I WANT TO TEST GRAB RECORD WITH MODEL
+
+I have record 'App\User'," $this->userAttributes" 
+I grab record 'App\User'," ['email' => 'johndoe@example.com']" 
+I assert true "$model instanceof App\User"
+

@@ -1,0 +1,6 @@
+I WANT TO TEST READ NOT FOUND | "POSTS"
+
+I send get('/api/'.$example['endpoint'].'/'.sq ")" 
+I see response code is "HttpCode::NOT_FOUND" 
+I see response is json ""
+

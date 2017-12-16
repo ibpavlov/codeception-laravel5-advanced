@@ -1,0 +1,6 @@
+I WANT TO UPLOAD A FILE
+
+I am on page '' 
+I send post('upload', [], ['file' => codecept_data_dir 'logo.jpg')]" 
+I see 'Success'
+

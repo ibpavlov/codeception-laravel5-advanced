@@ -1,0 +1,6 @@
+I WANT TO TEST HAVE RECORD WITH TABLE NAME
+
+I have record 'users'," $this->userAttributes" 
+I see record 'users'," ['id' => $id"," 'email' => 'johndoe@example.com']" 
+I don't see record 'users'," ['id' => $id"," 'email' => 'janedoe@example.com']"
+

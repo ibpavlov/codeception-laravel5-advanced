@@ -1,0 +1,6 @@
+I WANT TO TEST HAVE RECORD WITH MODEL
+
+I have record "User::class"," $this->userAttributes" 
+I see record 'App\User'," ['id' => $user->id"," 'email' => 'johndoe@example.com']" 
+I don't see record 'App\User'," ['id' => $user->id"," 'email' => 'janedoe@example.com']"
+

@@ -1,0 +1,9 @@
+I WANT TO LOGIN USING USER RECORD
+
+I am logged as(user::create "$this->userAttributes)" 
+I am on page "PostsPage::$url" 
+I see current url equals "PostsPage::$url" 
+I see authentication "" 
+I am on page "PostsPage::$url" 
+I see authentication ""
+

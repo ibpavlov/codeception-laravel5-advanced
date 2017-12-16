@@ -1,0 +1,7 @@
+I WANT TO TEST HAVE CONTEXTUAL BINDING
+
+I have contextual binding 'App\Test\Repeat'," '$times'," 3" 
+I have binding 'App\Test\StringConverter'," 'App\Test\Repeat' 
+I am on page 'service-container' 
+I see element("//p[text ")='String To ConvertString To ConvertString To Convert']""
+

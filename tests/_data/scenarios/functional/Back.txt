@@ -1,0 +1,7 @@
+I WANT TO REDIRECT BACK USING /BACK ROUTE
+
+I am on page '/' 
+I am on page '/back' 
+I expect 'I am redirected back to /' 
+I see current url equals '/'
+

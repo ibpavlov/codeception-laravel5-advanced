@@ -1,0 +1,9 @@
+I WANT TO UPDATE POST
+
+I send put "$this->endpoint."/$id""," ['title' => 'Lord of Thrones']" 
+I see response code is "200" 
+I see response is json "" 
+I see response contains json "['title' => 'Lord of Thrones']" 
+I see record 'posts'," ['title' => 'Lord of Thrones']" 
+I don't see record 'posts'," ['title' => 'Game of Thrones']"
+

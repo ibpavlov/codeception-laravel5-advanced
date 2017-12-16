@@ -1,0 +1,6 @@
+I WANT TO TEST HAVE
+
+I have "User::class"," ['email' => 'johndoe@example.com']" 
+I assert equals 'johndoe@example.com'," $user->email" 
+I see record 'users'," ['email' => 'johndoe@example.com']"
+

@@ -1,0 +1,12 @@
+I WANT TO CREATE POST
+
+I send post "$this->endpoint"," ['title' => 'Game of Rings'," 'body' => 'By George Tolkien']" 
+I see response code is "201" 
+I see response is json "" 
+I see response contains json "['title' => 'Game of Rings']" 
+I see record 'posts'," ['id' => $id"," 'title' => 'Game of Rings']" 
+I send get "$this->endpoint."/$id"" 
+I see response code is "200" 
+I see response is json "" 
+I see response contains json "['title' => 'Game of Rings']"
+

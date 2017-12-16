@@ -1,0 +1,6 @@
+I WANT TO DELETE POST
+
+I send delete "$this->endpoint."/$id"" 
+I see response code is "200" 
+I don't see record 'posts'," ['id' => $id]"
+

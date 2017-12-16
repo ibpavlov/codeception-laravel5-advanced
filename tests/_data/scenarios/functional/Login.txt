@@ -1,0 +1,11 @@
+I WANT TO LOGIN AS A USER
+
+I am on page '/login' 
+I fill field 'email'," 'john@doe.com' 
+I fill field 'password'," 'password' 
+I click 'button[type=submit]' 
+I see current url equals '' 
+I am on page '/posts' 
+I see authentication "" 
+I see 'Logged in as john@doe.com'
+

@@ -1,0 +1,6 @@
+I WANT TO DISABLING EVENTS
+
+I disable events "" 
+I am on page 'fire-event' 
+I don't see record 'users'," ['email' => 'johndoe@example.com']"
+

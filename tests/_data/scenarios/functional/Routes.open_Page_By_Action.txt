@@ -1,0 +1,6 @@
+I WANT TO OPEN PAGE BY ACTION
+
+I am on action 'PostsController@index' 
+I see current url equals '/posts' 
+I see current route is 'posts.index'
+

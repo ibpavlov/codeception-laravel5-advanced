@@ -1,0 +1,5 @@
+I WANT TO TEST WITH DOMAIN
+
+I am on page 'http://example.com' 
+I see 'Domain route'
+

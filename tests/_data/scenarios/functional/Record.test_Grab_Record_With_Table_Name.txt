@@ -1,0 +1,6 @@
+I WANT TO TEST GRAB RECORD WITH TABLE NAME
+
+I have record 'App\User'," $this->userAttributes" 
+I grab record 'users'," ['email' => 'johndoe@example.com']" 
+I assert true(is_array "$record)"
+

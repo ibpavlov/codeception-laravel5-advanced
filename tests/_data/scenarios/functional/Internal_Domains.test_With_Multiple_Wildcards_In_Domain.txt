@@ -1,0 +1,5 @@
+I WANT TO TEST WITH MULTIPLE WILDCARDS IN DOMAIN
+
+I am on page 'http://wild.card.example.com' 
+I see 'Multiple wildcards route'
+

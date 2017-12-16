@@ -1,0 +1,12 @@
+I WANT TO REGISTER A USER
+
+I am on page '/register' 
+I fill field 'name'," 'John Doe' 
+I fill field 'email'," 'example@example.com' 
+I fill field 'password'," 'password' 
+I fill field 'password_confirmation'," 'password' 
+I click 'button[type=submit]' 
+I am on page '/' 
+I see record 'users'," ['email' => 'example@example.com']" 
+I see authentication ""
+

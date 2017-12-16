@@ -1,0 +1,6 @@
+I WANT TO SEE IN SESSION
+
+I am on page '/session/My%20Message' 
+I see in session 'message' 
+I see in session 'message'," 'My Message'
+

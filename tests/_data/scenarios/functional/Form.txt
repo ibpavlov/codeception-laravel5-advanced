@@ -1,0 +1,10 @@
+I WANT TO SUBMIT A FORM
+
+I am on page '/form' 
+I fill field 'message'," 'My message!' 
+I click 'Submit' 
+I see 'Your message: My message!' 
+I fill field 'message'," 'Another message!' 
+I click 'Submit' 
+I see 'Your message: Another message!'
+

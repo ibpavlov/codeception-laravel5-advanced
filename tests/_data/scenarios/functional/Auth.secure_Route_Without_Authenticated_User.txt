@@ -1,0 +1,5 @@
+I WANT TO SECURE ROUTE WITHOUT AUTHENTICATED USER
+
+I am on page '/secure' 
+I see current url equals '/login'
+

@@ -1,0 +1,6 @@
+I WANT TO TEST HAVE SINGLETON
+
+I have singleton 'App\Test\StringConverter'," 'App\Test\ToUppercase' 
+I am on page 'service-container' 
+I see element("//p[text ")='STRING TO CONVERT']""
+

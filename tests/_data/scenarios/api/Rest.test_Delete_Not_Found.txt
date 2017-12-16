@@ -1,0 +1,6 @@
+I WANT TO TEST DELETE NOT FOUND | "POSTS"
+
+I send delete('/api/'.$example['endpoint'].'/'.sq ")" 
+I see response code is "HttpCode::NOT_FOUND" 
+I see response is json ""
+

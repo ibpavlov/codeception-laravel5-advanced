@@ -1,0 +1,4 @@
+I WANT TO ROUTE BEFORE REQUEST
+
+I assert equals('http://myapp.com/posts', route 'posts.index')"
+

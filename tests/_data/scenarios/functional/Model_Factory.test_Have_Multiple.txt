@@ -1,0 +1,5 @@
+I WANT TO TEST HAVE MULTIPLE
+
+I have multiple "User::class"," 3" 
+I assert equals(3, count "$users)"
+

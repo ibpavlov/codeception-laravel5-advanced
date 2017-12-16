@@ -1,0 +1,5 @@
+I WANT TO SEE A FLASH MESSAGE
+
+I am on page '/flash' 
+I see ""It's a flash""," ".flash""
+

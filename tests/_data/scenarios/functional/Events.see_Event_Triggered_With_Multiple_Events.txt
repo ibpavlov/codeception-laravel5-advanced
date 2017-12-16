@@ -1,0 +1,5 @@
+I WANT TO SEE EVENT TRIGGERED WITH MULTIPLE EVENTS
+
+I am on page 'fire-event' 
+I see event triggered 'App\Events\TestEvent'," 'App\Events\OtherTestEvent'
+

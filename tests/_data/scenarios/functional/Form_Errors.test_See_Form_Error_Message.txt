@@ -1,0 +1,6 @@
+I WANT TO TEST SEE FORM ERROR MESSAGE
+
+I see form error message 'name' 
+I see form error message 'name'," 'required' 
+I see form error message 'name'," 'The name field is required.'
+

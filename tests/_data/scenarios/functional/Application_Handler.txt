@@ -1,0 +1,10 @@
+I WANT TO 
+
+I send get '/test-value' 
+I see 'Test value is 10' 
+I send get '/test-value' 
+I see 'Test value is 15' 
+I clear application handlers "" 
+I send get '/test-value' 
+I see 'Test value is 5'
+

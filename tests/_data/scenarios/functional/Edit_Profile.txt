@@ -1,0 +1,14 @@
+I WANT TO EDIT A PROFILE
+
+I am on page '/login' 
+I fill field 'email'," 'johndoe@example.com' 
+I fill field 'password'," 'password' 
+I click 'button[type=submit]' 
+I am on page '/users/1' 
+I see 'Logged in as johndoe@example.com' 
+I click 'Edit' 
+I fill field 'Email'," 'john@doe.com' 
+I click 'Update' 
+I see current url equals '/users/1' 
+I see 'Logged in as john@doe.com'
+

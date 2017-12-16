@@ -1,0 +1,5 @@
+I WANT TO TEST WITH WILDCARD IN DOMAIN
+
+I am on page 'http://wildcard.example.com' 
+I see 'Wildcard route'
+

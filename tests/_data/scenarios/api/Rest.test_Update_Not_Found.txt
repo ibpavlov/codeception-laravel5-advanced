@@ -1,0 +1,7 @@
+I WANT TO TEST UPDATE NOT FOUND | "POSTS"
+
+I have http header 'Content-Type'," 'application/json' 
+I send put('/api/'.$example['endpoint'].'/'.sq ")" 
+I see response code is "HttpCode::NOT_FOUND" 
+I see response is json ""
+

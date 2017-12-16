@@ -1,0 +1,5 @@
+I WANT TO TEST CUSTOM VALIDATION SUCCESS
+
+I am on page 'validation?postal_code=1234AB&post_id=1' 
+I see 'Validation success'
+

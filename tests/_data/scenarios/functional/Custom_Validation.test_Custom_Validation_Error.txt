@@ -1,0 +1,6 @@
+I WANT TO TEST CUSTOM VALIDATION ERROR
+
+I am on page 'validation?postal_code=invalid&post_id=123456' 
+I see form error message 'postal_code' 
+I see form error message 'post_id'
+

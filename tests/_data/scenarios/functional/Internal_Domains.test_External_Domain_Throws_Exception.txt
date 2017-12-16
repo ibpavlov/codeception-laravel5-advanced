@@ -1,0 +1,5 @@
+I WANT TO TEST EXTERNAL DOMAIN THROWS EXCEPTION
+
+I am on page 'https://www.google.com' 
+I fail 'Visiting an external URL should throw an ExternalUrlException'
+

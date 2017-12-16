@@ -1,0 +1,6 @@
+I WANT TO SECURE ROUTE WITH AUTHENTICATED USER
+
+I am logged as(user::create "$this->userAttributes)" 
+I am on page '/secure' 
+I see 'Hello World'
+

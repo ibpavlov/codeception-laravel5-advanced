@@ -1,0 +1,8 @@
+I WANT TO EDIT POST
+
+I have record 'posts'," $this->postAttributes" 
+I see current url equals($posts page->route ""/$id")" 
+I see 'Show Post'," 'h1' 
+I see "$randTitle" 
+I don't see 'Hello Universe'
+

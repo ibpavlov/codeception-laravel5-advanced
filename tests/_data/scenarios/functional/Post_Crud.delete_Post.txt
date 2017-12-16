@@ -1,0 +1,8 @@
+I WANT TO DELETE POST
+
+I have record 'posts'," $this->postAttributes" 
+I am on page "$postsPage::$url" 
+I see 'Hello Universe' 
+I see current url equals "$postsPage::$url" 
+I don't see 'Hello Universe'
+

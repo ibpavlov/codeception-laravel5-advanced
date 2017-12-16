@@ -1,0 +1,5 @@
+I WANT TO CREATE POST
+
+I see current url equals "$postsPage::$url" 
+I see 'Hello world'," '.table'
+

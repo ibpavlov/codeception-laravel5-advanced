@@ -1,0 +1,5 @@
+I WANT TO SEE EVENT TRIGGERED
+
+I am on page 'fire-event' 
+I see event triggered 'App\Events\TestEvent'
+
