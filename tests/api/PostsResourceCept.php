@@ -5,7 +5,7 @@ $I->sendPOST("/api/posts", [
     'title' => 'Game of Rings',
     'body' => 'By George Tolkien'
 ]);
-$I->seeResponseCodeIs(200);
+$I->seeResponseCodeIs(201);
 $I->seeResponseIsJson();
 $I->seeResponseContainsJson([
     'title' => 'Game of Rings'

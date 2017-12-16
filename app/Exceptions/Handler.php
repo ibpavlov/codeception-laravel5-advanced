@@ -4,6 +4,7 @@ use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -47,6 +48,8 @@ class Handler extends ExceptionHandler
     {
         if ($e instanceof HttpException) {
             return $this->renderHttpException($e);
+        } elseif($e instanceof ModelNotFoundException && $request->segment(1) == "api") {
+            return new JsonResponse(['error'=>'model not found'], 404);
         } else {
             return parent::render($request, $e);
         }

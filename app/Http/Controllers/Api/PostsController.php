@@ -54,7 +54,7 @@ class PostsController extends Controller {
     {
         $post = $this->post->create($request->all());
 
-        return $this->responseFactory->json($post);
+        return $this->responseFactory->json($post, 201);
     }
 
 
