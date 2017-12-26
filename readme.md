@@ -1,7 +1,7 @@
 # Advanced Laravel Application with Codeception tests.
 
 [![Build Status](https://travis-ci.org/ibpavlov/codeception-laravel5-advanced.svg?branch=codeception-2.3)](https://travis-ci.org/ibpavlov/codeception-laravel5-advanced)
-
+ 
 ### Setup
 
 You can setup this sample manually or use [Vagrant](https://www.vagrantup.com/) to automatically set up a development environment for you.
