@@ -1,6 +1,6 @@
-# Sample Laravel Application with Codeception tests.
+# Advanced Laravel Application with Codeception tests.
 
-[![Build Status](https://travis-ci.org/janhenkgerritsen/codeception-laravel5-sample.svg?branch=codeception-2.1)](https://travis-ci.org/janhenkgerritsen/codeception-laravel5-sample)
+[![Build Status](https://travis-ci.org/ibpavlov/codeception-laravel5-advanced.svg?branch=codeception-2.3)](https://travis-ci.org/ibpavlov/codeception-laravel5-advanced)
 
 ### Setup
 
