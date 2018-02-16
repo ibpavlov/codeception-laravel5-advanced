@@ -1,0 +1,59 @@
+stages:
+  - test
+  - deploy
+
+tests:
+  stage: test
+  before_script:
+    - bash /home/jenkins/deploy-scripts/self-update.sh
+    - bash /home/jenkins/deploy-scripts/concurrency.sh --action=start --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel-${CI_JOB_STAGE}
+  script:
+    - bash /home/jenkins/deploy-scripts/build.sh --repohost=gitlab.objectsystems.com --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel-${CI_JOB_STAGE} --repo=ipavlov/codeception-laravel5-advanced --dgrp=GitlabTests
+    - mkdir -p /home/jenkins/${CI_PROJECT_DIR}/output
+    - rm -rf /home/jenkins/${CI_PROJECT_DIR}/output/*
+    - docker exec -u 1000 codeception-laravel-${CI_JOB_STAGE}-${CI_COMMIT_REF_NAME}-fpm bash -c "cd /app && ./vendor/bin/codecept run --coverage-xml"
+  after_script:
+    - cp -rf /home/jenkins/deploy-scripts/workspace/codeception-laravel-${CI_JOB_STAGE}/${CI_COMMIT_REF_NAME}/tests/_output/ /home/jenkins/${CI_PROJECT_DIR}/output/
+    - bash /home/jenkins/deploy-scripts/concurrency.sh --action=end --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel-${CI_JOB_STAGE}
+  only:
+    - development
+  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
+  artifacts:
+    when: always
+    name: "codeception-laravel_artifacts_${CI_JOB_ID}"
+    paths:
+      - output/
+  tags:
+  - php-osi-ssh
+
+#Left intentionally. If for some reason, we need to start envs on Sofia's PHP machine, please uncomment
+deploy_php:
+  stage: deploy
+  before_script:
+    - bash /home/jenkins/deploy-scripts/self-update.sh
+    - bash /home/jenkins/deploy-scripts/concurrency.sh --action=start --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel
+  script:
+    - bash /home/jenkins/deploy-scripts/build.sh --repohost=gitlab.objectsystems.com --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel --repo=ipavlov/codeception-laravel5-advanced --dgrp=Gitlab
+  after_script:
+    - bash /home/jenkins/deploy-scripts/concurrency.sh --action=end --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel
+    - bash ./scripts/syncDb.sh --branch=${CI_COMMIT_REF_NAME}
+  only:
+    - development
+  tags:
+  - codeception-laravel-dev
+
+#Left intentionally. If for some reason, we need to start envs on Sofia's PHP machine, please uncomment
+deploy_php:
+  stage: deploy
+  before_script:
+    - bash /home/jenkins/deploy-scripts/self-update.sh
+    - bash /home/jenkins/deploy-scripts/concurrency.sh --action=start --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel
+  script:
+    - bash /home/jenkins/deploy-scripts/build.sh --repohost=gitlab.objectsystems.com --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel --repo=ipavlov/codeception-laravel5-advanced --dgrp=Gitlab
+  after_script:
+    - bash /home/jenkins/deploy-scripts/concurrency.sh --action=end --branch=${CI_COMMIT_REF_NAME} --job=codeception-laravel
+    - bash ./scripts/syncDb.sh --branch=${CI_COMMIT_REF_NAME}
+  only:
+    - master
+  tags:
+  - codeception-laravel-dev

@@ -1,0 +1,47 @@
+server {
+    listen 80;
+    server_name ${HOST_NAME} www.${HOST_NAME};
+    return 301 https://${HOST_NAME}$request_uri;
+}
+
+server {
+    listen 443;
+    server_name www.${HOST_NAME};
+    return 301 https://${HOST_NAME}$request_uri;
+}
+
+server {
+    listen 443 default_server;
+    server_name ${HOST_NAME};
+    root /app/public;
+    index index.php;
+
+    include snippets/restrict.conf;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+
+    access_log off;
+    error_log  /var/log/nginx/${HOST_NAME}.log error;
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass phpfpm:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param PATH_INFO       $fastcgi_path_info;
+        fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_connect_timeout 300;
+        fastcgi_send_timeout 300;
+        fastcgi_read_timeout 300;
+        proxy_connect_timeout 300;
+        proxy_send_timeout 300;
+        proxy_read_timeout 300;
+        send_timeout  300;
+    }
+}
